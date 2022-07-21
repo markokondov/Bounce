@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>104</y>
+      <w>216</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>+ AnimationViewer
+--
+- DELAY: int
+- shapes: List&lt;Shape&gt;
+- timer: Timer
+--
++ paintComponent(g: Graphics): void
++ actionPerformed(e: ActionEvent): void
++ main(args: String[]): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>176</y>
+      <w>96</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>+ GraphicsPainter
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>752</x>
+      <y>312</y>
+      <w>264</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
++ Painter
+--
+
+--
++ drawRect(x: int, y: int, width: int, height: int): void 
++ drawOval(x: int, y: int, width: int, height: int): void
++ drawLine(x1: int, y1: int, x2: int, y2: int): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>584</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+ RectangleShape
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>376</x>
+      <y>312</y>
+      <w>248</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>/+ Shape/
+--
+# DEFAULT_X_POS: int
+# DEFAULT_ Y_POS: int
+# DEFAULT_DELTA_X: int
+# DEFAULT_DELTA_Y: int
+# DEFAULT_HEIGHT: int
+# DEFAULT_WIDTH: int
+# x: int
+# y: int
+# deltaX: int
+# deltaY: int
+# width: int
+# height: int
+--
++ move(width: int, height: int): void
+/+ paint(painter: Painter): void /
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>528</y>
+      <w>24</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>912</x>
+      <y>176</y>
+      <w>80</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>+ MockPainter
+--
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>240</y>
+      <w>40</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>808</x>
+      <y>240</y>
+      <w>88</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+</panel_attributes>
+    <additional_attributes>90.0;90.0;90.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>872</x>
+      <y>240</y>
+      <w>96</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;50.0;100.0;50.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>376</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>88</x>
+      <y>120</y>
+      <w>256</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>This is the class that contains the main() method
+and is in charge of initiating the application, adding
+itself (a JPanel Object) to the JFrame, and 
+contains the timer which calls repaint() to update 
+the GUI depending on the final int value DELAY.
+It also contains a list of all Shape objects which
+need to be painted onto the JPanel, and utilises
+GraphicsPainter to do so - inside the 
+paintComponent() method.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>424</y>
+      <w>56</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>88</x>
+      <y>328</y>
+      <w>256</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>Abstract superclass for different shapes
+(Currently only a Rectangle shape).
+
+Instance methods contain default position / 
+size / speed (delta positions - distance to change
+per move() call)
+
+Contains one abstract method (paint())
+which takes a painter (either GraphicsPainter
+or MockPainter for testing purposes) in order
+to update the GUI and draw the shape. This
+is implemented in each child class
+The move() method updates the position of 
+the shape based on the speed settings (set
+by the deltaX and deltaY fields.
+toString() method overridden to assist with shape
+identification.
+
+Also contains getters and setters for fields,
+although excluded from diagram for simplicity.
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>168</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>536</x>
+      <y>0</y>
+      <w>64</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>+ JPanel
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>48</y>
+      <w>88</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;90.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1032</x>
+      <y>176</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>MockPainter logs positions
+instead of updating and painting
+to GUI for testing purposes, not
+actually used in running of
+application</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>984</x>
+      <y>208</y>
+      <w>64</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1096</x>
+      <y>328</y>
+      <w>208</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Painter interface used to draw different
+shapes in different positions. Already 
+contains implementation for future Oval
+class (not yet in UML diagram).</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>360</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>696</x>
+      <y>48</y>
+      <w>208</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>GraphicsPainter is used to draw shapes
+onto the GUI by the implemented 
+Painter methods.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>88</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>608</x>
+      <y>200</y>
+      <w>168</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>368</x>
+      <y>0</y>
+      <w>96</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
++ ActionListener
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>56</y>
+      <w>72</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;70.0;40.0;70.0;60.0</additional_attributes>
+  </element>
+</diagram>
